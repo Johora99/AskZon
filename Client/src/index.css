@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+  --color-SeaGreen: rgb(82, 149, 95);
+}
