@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from '../Components/Navbar'
 import TopNav from '../Components/TopNav';
+import Footer from '../Components/Footer';
 
 export default function MainLayOut() {
   const location = useLocation();
@@ -12,6 +13,7 @@ export default function MainLayOut() {
       <Navbar />
       </div>
       <Outlet></Outlet>
+      <Footer />
     </div>
   )
 }
