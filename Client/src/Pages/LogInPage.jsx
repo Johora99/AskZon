@@ -1,6 +1,7 @@
 import React from 'react';
 import bgImg from '../assets/loginbg.png';
 import BgImage from '../ShareComponent/BgImage';
+import { Link } from 'react-router-dom';
 
 export default function LogInPage() {
   return (
@@ -13,9 +14,9 @@ export default function LogInPage() {
             <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
             <p className="text-sm text-center dark:text-gray-600">
               Don’t have an account?{' '}
-              <a href="#" rel="noopener noreferrer" className="focus:underline hover:underline text-yellow-500">
+              <Link to='/signup' rel="noopener noreferrer" className="focus:underline hover:underline text-yellow-500">
                 Sign up here
-              </a>
+              </Link>
             </p>
 
             {/* Google Button */}
