@@ -2,23 +2,31 @@ import React from 'react';
 import about from '../assets/aboutjpg.jpg'
 import { motion } from 'framer-motion';
 import AboutUsSlider from './AboutUsSlider';
+import Button from '../ShareComponent/Button';
 export default function AboutUs() {
   // Button animation variants
 const buttonVariants = {
   hidden: { opacity: 0, x: -20 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: 'easeOut' } },
 };
+const stats = [
+  { value: '1', unit: '/Year', label: 'Keep Full Faith' },
+  { value: '1', unit: '/Address', label: 'Consulting Branch' },
+  { value: '1', unit: '/Consultant', label: 'Professional & Dedicated' },
+  { value: '0k', unit: '/Clients', label: 'Happy and Trust Customers' },
+];
   return (
-    <div className='bg-gradient-to-b from-white via-yellow-100 to-yellow-100'>
-      <div className="container w-11/12 mx-auto">
-        <h2 className="text-6xl font-bold text-black py-20">About Ask <span className='text-yellow-400'>Zone</span></h2>
+    <div className='bg-gradient-to-b from-white  to-yellow-50'>
+      <div className="container w-11/12 mx-auto py-20">
+        <h2 className="text-6xl font-bold text-black">About Ask <span className='text-yellow-400'>Zone</span></h2>
+        <p className='text-sm text-yellow-950 mt-2 max-w-2xl'>At AskZone, we aim to maintain our place as a trusted platform where knowledge meets curiosity, empowering people through open questions and thoughtful answers.</p>
       </div>
       <div className='w-full h-[1px] bg-yellow-600 opacity-50'></div>
-      <div className='grid grid-cols-12 gap-10'>
-        <div className='col-span-2'>
-          <img src={about} alt="" className='h-full w-full object-cover'/>
+      <div className='grid grid-cols-11 gap-10'>
+        <div className='col-span-3 my-10 rounded-2xl'>
+          <img src={about} alt="" className='h-full w-full object-cover rounded-r-2xl'/>
         </div>
-         <div className='col-span-5 py-20'>
+         <div className='col-span-4 py-20'>
           <h3 className='text-gray-500 tracking-[5px] text-lg'>Welcome to AskZone</h3>
           <p className='text-sm text-yellow-950'>Ask Questions. Share Answers. Grow Together.</p>
           <h2 className='text-5xl my-6 leading-14 font-medium'>We help you find the answers you need to achieve your goals.</h2>
@@ -27,16 +35,9 @@ const buttonVariants = {
            <p className='text-yellow-950'>We're building more than just a Q&A site we’re growing a supportive community fueled by learning, respect, and meaningful contributions.Join us to explore new perspectives, grow your understanding, and empower others through shared knowledge.
            At AskZone, every question matters and every answer makes a difference.
            </p>
-           <motion.button
-            variants={buttonVariants}
-            whileHover={{ scale: 1.05, boxShadow: '0 0 15px rgba(255, 255, 255, 0.3)' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 text-lg font-semibold rounded-full bg-yellow-400 text-white hover:bg-yellow-300 hover:shadow-lg transition-all duration-300 mt-10"
-          >
-           More About Us
-          </motion.button>
+           <Button title={'More About Us'}></Button>
          </div>
-         <div className='col-span-5 py-20'>
+         <div className='col-span-4 py-20'>
           <div className='h-full flex'>
           <div className='w-[1px] h-full bg-yellow-600 opacity-50'></div>
         <div className='w-full'>
@@ -55,6 +56,21 @@ const buttonVariants = {
         </div>
           </div>
          </div>
+      </div>
+      <div className='w-full h-[1px] bg-yellow-600 opacity-50'></div>
+      <div className="container w-11/12 mx-auto py-20">
+        <div className='flex justify-between items-start'>
+        <h2 className='text-5xl my-6 leading-14 font-medium max-w-3xl'>Maintaining Our Position as a Leading Knowledge-Sharing Platform in the Digital Space.</h2>
+         <Button title={'Ask a Question'}></Button>
+        </div>
+        <div className='flex items-center justify-between'>
+        {stats.map((item, idx) => (
+          <div key={idx} className="mt-10">
+            <h2 className="text-7xl font-semibold text-black">{item.value}<span className="text-base font-medium text-gray-800">{item.unit}</span></h2>
+            <p className="text-sm text-gray-600">{item.label}</p>
+          </div>
+        ))}
+        </div>
       </div>
     </div>
   );

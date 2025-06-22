@@ -9,7 +9,7 @@ const slides = [
   },
   {
     title: 'Our Vision.',
-    text: 'To become the most trusted global platform where curious minds connect, learn, and collaborate shaping a smarter future together.',
+    text: 'To become the most trusted global platform where curious minds connect, learn, and collaborate shaping a smarter future together and grow together',
   },
 ];
 
@@ -45,14 +45,14 @@ export default function AboutUsSlider() {
       <div className="flex gap-4">
         <button
           onClick={prevSlide}
-          className="p-2 rounded hover:bg-gray-200 transition"
+          className="p-2 rounded hover:bg-yellow-400 transition"
           aria-label="Previous"
         >
           <ArrowLeft size={30} />
         </button>
         <button
           onClick={nextSlide}
-          className="p-2 rounded hover:bg-gray-200 transition"
+          className="p-2 rounded hover:bg-yellow-400 transition"
           aria-label="Next"
         >
           <ArrowRight size={30} />

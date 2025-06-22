@@ -5,6 +5,7 @@ import bgImg from '../assets/banner.webp'
 import BgImage from '../ShareComponent/BgImage'
 import AboutUs from '../Components/AboutUs'
 import AnimatedBottom from '../Components/AnimatedBottom'
+import HowItWorks from '../Components/HowItWorks'
 export default function HomePage() {
   return (
     
@@ -32,9 +33,36 @@ export default function HomePage() {
     <div className="absolute inset-0 bg-gradient-to-l from-transparent to-yellow-900  opacity-60 z-0"></div>
   
     </div>
-    <div>
-      <AboutUs />
+    <div className="relative">
+  <AboutUs />
+  <svg
+    className="absolute -bottom-1 left-0 w-full"
+    viewBox="0 0 1440 320"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="none"
+  >
+    <path
+      fill="#facc15"
+      d="M0,288 C360,192 1080,384 1440,288 L1440,320 L0,320 Z"
+    />
+  </svg>
     </div>
+
+    <div className="my-40 relative">
+  <HowItWorks />
+  <svg
+    className="absolute -bottom-1 left-0 w-full"
+    viewBox="20 20 1400 250"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="none"
+  >
+    <path
+      fill="#facc15"
+      d="M0,256 C300,320 1140,160 1440,240 L1440,320 L0,320 Z"
+    />
+  </svg>
+</div>
+
     <div>
       <AnimatedBottom />
     </div>
