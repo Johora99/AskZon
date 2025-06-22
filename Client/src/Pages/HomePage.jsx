@@ -3,9 +3,13 @@ import Banner from '../Components/Banner'
 import Navbar from '../Components/Navbar'
 import bgImg from '../assets/banner.webp'
 import BgImage from '../ShareComponent/BgImage'
+import AboutUs from '../Components/AboutUs'
+import AnimatedBottom from '../Components/AnimatedBottom'
 export default function HomePage() {
   return (
-    <div className='relative'     style={{
+    
+    <div>
+    <div className='relative' style={{
       clipPath: 'polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%)',
     }}>
       <svg
@@ -26,6 +30,14 @@ export default function HomePage() {
      </div>
     </BgImage>
     <div className="absolute inset-0 bg-gradient-to-l from-transparent to-yellow-900  opacity-60 z-0"></div>
+  
+    </div>
+    <div>
+      <AboutUs />
+    </div>
+    <div>
+      <AnimatedBottom />
+    </div>
     </div>
   )
 }
