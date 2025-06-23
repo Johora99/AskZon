@@ -6,6 +6,7 @@ import BgImage from '../ShareComponent/BgImage'
 import AboutUs from '../Components/AboutUs'
 import AnimatedBottom from '../Components/AnimatedBottom'
 import HowItWorks from '../Components/HowItWorks'
+import TopUsers from '../Components/TopUsers'
 export default function HomePage() {
   return (
     
@@ -47,7 +48,6 @@ export default function HomePage() {
     />
   </svg>
     </div>
-
     <div className="my-40 relative">
   <HowItWorks />
   <svg
@@ -61,8 +61,10 @@ export default function HomePage() {
       d="M0,256 C300,320 1140,160 1440,240 L1440,320 L0,320 Z"
     />
   </svg>
-</div>
-
+    </div>
+    <div>
+    <TopUsers />
+    </div>
     <div>
       <AnimatedBottom />
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaSignInAlt, FaPenFancy, FaLightbulb } from 'react-icons/fa';
+import Button from '../ShareComponent/Button';
 
 export default function HowItWorks() {
   const steps = [
@@ -58,9 +59,7 @@ export default function HowItWorks() {
           <p className="text-gray-700 max-w-xl mx-auto mb-6">
             Whether you're curious, confused, or confident — this is the place to connect and contribute. AskZone thrives on thoughtful curiosity and helpful answers.
           </p>
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-md shadow-md transition">
-            Ask Your First Question
-          </button>
+        <Button title={'Ask Your First Question'}></Button>
         </div>
       </div>
 
