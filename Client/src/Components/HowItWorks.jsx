@@ -26,8 +26,10 @@ export default function HowItWorks() {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Clip Path Background */}
-      <div className="absolute inset-0 z-0">
+    
+      <div className='container w-11/12 mx-auto'>
+        {/* Clip Path Background */}
+        <div className="absolute inset-0 z-0">
         <div className="h-full w-full bg-gradient-to-b from-white  to-yellow-100 clip-path-custom"></div>
       </div>
 
@@ -69,6 +71,7 @@ export default function HowItWorks() {
           clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
         }
       `}</style>
+</div>
     </section>
   );
 }

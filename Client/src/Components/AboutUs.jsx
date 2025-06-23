@@ -16,10 +16,12 @@ const stats = [
   { value: '0k', unit: '/Clients', label: 'Happy and Trust Customers' },
 ];
   return (
-    <div className='bg-gradient-to-b from-white  to-yellow-50'>
+    <div className='bg-gradient-to-b from-white  to-yellow-50 relative'>
+      <div className="absolute -top-20 right-10 w-[500px] h-96 bg-gradient-to-br from-purple-400 via-yellow-300 to-orange-300 opacity-30 blur-[150px] rounded-full animate-pulse pointer-events-none z-0" />
+
       <div className="container w-11/12 mx-auto py-20">
         <h2 className="text-6xl font-bold text-black">About Ask <span className='text-yellow-400'>Zone</span></h2>
-        <p className='text-sm text-yellow-950 mt-2 max-w-2xl'>At AskZone, we aim to maintain our place as a trusted platform where knowledge meets curiosity, empowering people through open questions and thoughtful answers.</p>
+        <p className="text-lg text-gray-700 max-w-3xl mt-2 tracking-widest">At AskZone, we aim to maintain our place as a trusted platform where knowledge meets curiosity, empowering people through open questions and thoughtful answers.</p>
       </div>
       <div className='w-full h-[1px] bg-yellow-600 opacity-50'></div>
       <div className='grid grid-cols-11 gap-10'>

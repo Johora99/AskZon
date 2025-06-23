@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Amina Rahman",
+    "title": "Software Engineer",
+    "image": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "amina.rahman@example.com",
+    "message": "AskZone has become an essential part of my learning and problem-solving routine. I often find myself returning to the platform not just for solutions, but for inspiration. The community here is incredibly responsive, respectful, and insightful. It's amazing how quickly I receive well-explained answers from professionals across fields.",
+    "rating": 5
+  },
+  {
+    "name": "Rajib Hossain",
+    "title": "University Student",
+    "image": "https://randomuser.me/api/portraits/men/22.jpg",
+    "email": "rajib.hossain@example.com",
+    "message": "As a university student, I often struggle with advanced topics in math and programming. AskZone has saved me countless hours of frustration. I love how the platform encourages discussion, not just quick replies. It feels like I’m surrounded by mentors who genuinely want to help me succeed.",
+    "rating": 4
+  },
+  {
+    "name": "Tania Akter",
+    "title": "Freelance Web Developer",
+    "image": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "tania.akter@example.com",
+    "message": "The thoughtful responses and supportive community on AskZone have boosted my confidence tremendously. Whether I’m debugging a tricky JavaScript issue or looking for design advice, I always find helpful voices here. It’s not just about questions — it’s about growing and giving back too.",
+    "rating": 5
+  },
+  {
+    "name": "Mehedi Hasan",
+    "title": "Data Analyst",
+    "image": "https://randomuser.me/api/portraits/men/45.jpg",
+    "email": "mehedi.hasan@example.com",
+    "message": "AskZone helped me transition from learning data analysis to actually applying it professionally. I’ve found both guidance and encouragement from people with real industry experience. The platform feels safe to ask, even when the question feels basic. That makes a huge difference in long-term learning.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Chowdhury",
+    "title": "Product Designer",
+    "image": "https://randomuser.me/api/portraits/women/25.jpg",
+    "email": "sarah.chowdhury@example.com",
+    "message": "AskZone isn’t just a Q&A platform — it’s a creative, thoughtful, and dynamic space to explore ideas. I’ve received feedback that helped me improve real design projects. The best part is how encouraging and open-minded everyone is, especially when you’re still figuring things out.",
+    "rating": 4
+  }
+]

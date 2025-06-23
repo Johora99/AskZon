@@ -65,15 +65,45 @@ const getBadgeIcon = (badge) => {
 export default function TopUsers() {
   return (
     <section
-      className="relative z-10 my-40 px-6 md:px-28 py-24 bg-fixed bg-cover bg-center overflow-hidden"
-    >
-      {/* Header with Dynamic Gradient */}
-  
-      <h2 className="text-4xl md:text-7xl font-bold text-center mb-30">
-      Top <span className='text-yellow-400'>Contributors</span> 
-        </h2>
+      className="relative z-10 my-40 md:px-28 py-24 "
+    >   
+    <div className='container w-11/12 mx-auto'>
+         {/* Header with Dynamic Gradient */}
+         <div className="relative py-16 px-6 sm:px-12 bg-gradient-to-br from-yellow-50 via-white to-yellow-100 overflow-hidden rounded-3xl shadow-2xl max-w-5xl mx-auto mb-30">
+  {/* Background SVG shape */}
+  <svg
+    className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+    preserveAspectRatio="none"
+  >
+    <path
+      fill="#facc15"
+      d="M0,160 C480,320 960,0 1440,160 L1440,320 L0,320 Z"
+    />
+  </svg>
+
+  {/* Content */}
+  <div className="relative z-10 text-center">
+    <h2 className="text-4xl md:text-7xl font-extrabold  mb-6 drop-shadow-md">
+     Our <span className='text-yellow-400'>Top</span> Contributors
+    </h2>
+    <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+      At <span className="font-semibold text-yellow-700">AskZone</span>, we celebrate the individuals whose curiosity and generosity light up our platform.
+      These top minds go above and beyond — asking brilliant questions, sharing deep insights, and building a culture of helpfulness.
+    </p>
+    <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mt-4">
+      💬 Whether solving complex problems or offering beginner-friendly advice, their contributions empower our growing knowledge-sharing community.
+    </p>
+    <p className="mt-6 text-gray-600 italic">
+      Let’s give a big round of applause to the people shaping the future — one question and answer at a time!
+    </p>
+  </div>
+      </div>
+
       {/* Grid Layout with 3D Tilt */}
-      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto relative">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-96 bg-gradient-to-br from-purple-900 via-yellow-500 to-yellow-900 opacity-30 blur-[150px] rounded-full animate-pulse pointer-events-none z-0" />
         {topUsers.map((user, index) => (
           <div
             key={user.id}
@@ -152,6 +182,7 @@ export default function TopUsers() {
       {/* Decorative Background Elements */}
       <div className="absolute -top-28 -left-32 w-96 h-96 bg-gradient-to-br from-yellow-200 via-yellow-300 to-purple-300 rounded-full opacity-25 blur-4xl animate-slow-pulse" />
       <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-purple-300 via-yellow-200 to-yellow-300 rounded-full opacity-20 blur-4xl animate-slow-pulse" />
+    
 
       {/* Enhanced Particle Effect */}
       <div className="absolute inset-0 pointer-events-none">
@@ -216,6 +247,8 @@ export default function TopUsers() {
           transform: perspective(1000px) rotateX(3deg) rotateY(3deg);
         }
       `}</style>
+    </div>
+    
     </section>
   );
 }
