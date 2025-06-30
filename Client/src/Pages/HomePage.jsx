@@ -8,6 +8,7 @@ import AnimatedBottom from '../Components/AnimatedBottom'
 import HowItWorks from '../Components/HowItWorks'
 import TopUsers from '../Components/TopUsers'
 import Testimonials from '../Components/Testimonials'
+import OurServices from '../Components/OurServices'
 export default function HomePage() {
   return (
     
@@ -65,6 +66,9 @@ export default function HomePage() {
     </div>
     <div>
     <TopUsers />
+    </div>
+    <div>
+      <OurServices />
     </div>
     <div>
       <Testimonials />

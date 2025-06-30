@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function SignUpPage() {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center">
+    <div className="w-full min-h-screen flex items-center justify-center my-20">
       <div className="container w-11/12 mx-auto py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 shadow-lg rounded-lg overflow-hidden">
           

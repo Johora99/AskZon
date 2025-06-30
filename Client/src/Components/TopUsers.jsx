@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGem, FaCrown, FaMedal, FaStar } from 'react-icons/fa';
+import JumpingBallComponent from '../ShareComponent/JumpingBallComponent';
 
 const topUsers = [
   {
@@ -84,21 +85,63 @@ export default function TopUsers() {
   </svg>
 
   {/* Content */}
-  <div className="relative z-10 text-center">
-    <h2 className="text-4xl md:text-7xl font-extrabold  mb-6 drop-shadow-md">
-     Our <span className='text-yellow-400'>Top</span> Contributors
-    </h2>
-    <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-      At <span className="font-semibold text-yellow-700">AskZone</span>, we celebrate the individuals whose curiosity and generosity light up our platform.
-      These top minds go above and beyond — asking brilliant questions, sharing deep insights, and building a culture of helpfulness.
-    </p>
-    <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mt-4">
-      💬 Whether solving complex problems or offering beginner-friendly advice, their contributions empower our growing knowledge-sharing community.
-    </p>
-    <p className="mt-6 text-gray-600 italic">
-      Let’s give a big round of applause to the people shaping the future — one question and answer at a time!
-    </p>
-  </div>
+  <div className="relative z-10 text-center py-16 bg-gradient-to-bl to-yellow-600 from-yellow-100 rounded-3xl shadow-2xl max-w-4xl mx-auto overflow-hidden" style={{ clipPath: 'polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%)' }}>
+      <style>
+        {`
+          @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(250, 204, 21, 0.7); }
+            50% { transform: scale(1.1); box-shadow: 0 0 30px rgba(251, 191, 36, 0.9); }
+          }
+          .pulsing-glow {
+            animation: pulseGlow 2.5s ease-in-out infinite;
+          }
+          .gradient-title {
+            background: linear-gradient(135deg, #facc15, #fb923c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+          }
+          .hover-glow:hover {
+            text-shadow: 0 0 15px rgba(250, 204, 21, 0.8), 0 0 25px rgba(251, 146, 60, 0.6);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+          }
+          .bg-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent);
+            z-index: -1;
+          }
+        `}
+      </style>
+      <div className="bg-overlay relative">
+        <div className="flex items-center justify-center">
+          <JumpingBallComponent title="Top Contributors" />
+        </div>
+        <h2 className="text-4xl md:text-7xl font-bold text-center mb-4">
+        Our <span className='text-yellow-700'>Top</span> Contributors
+        </h2>
+        <p className="text-lg md:text-xl text-yellow-700 max-w-3xl mx-auto leading-relaxed px-6">
+          At{' '}
+          <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-900 to-orange-400">
+            AskZone
+          </span>
+          , we honor the trailblazers whose curiosity and generosity ignite our platform. These brilliant minds ask
+          thought-provoking questions, share profound insights, and foster a vibrant culture of collaboration.
+        </p>
+        <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed mt-4 px-6">
+           From tackling intricate challenges to offering accessible advice, their contributions fuel our thriving
+          knowledge-sharing ecosystem.
+        </p>
+        <p className="mt-6 text-gray-800 opacity-60 max-w-3xl mx-auto px-6 text-base md:text-lg">
+          Let’s raise a toast to the visionaries shaping tomorrow — one question, one answer, one connection at a time!
+        </p>
+      </div>
+    </div>
       </div>
 
       {/* Grid Layout with 3D Tilt */}
@@ -107,7 +150,7 @@ export default function TopUsers() {
         {topUsers.map((user, index) => (
           <div
             key={user.id}
-            className="relative group p-8 rounded-3xl bg-white/85 backdrop-blur-2xl border border-transparent hover:border-yellow-400 shadow-2xl hover:shadow-yellow-600/60 transition-all duration-500 transform hover:-translate-y-5 tilt-card"
+            className="relative group p-8 rounded-3xl bg-white/85 backdrop-blur-2xl border border-yellow-400 shadow-2xl shadow-yellow-600/60 transition-all duration-500 transform hover:-translate-y-5 tilt-card"
             style={{
               animation: `float-${index} 4.5s ease-in-out infinite`,
               animationDelay: `${index * 0.4}s`,
@@ -136,7 +179,7 @@ export default function TopUsers() {
                 <img
                   src={user.avatar}
                   alt={user.name}
-                  className="relative w-36 h-36 rounded-full border-4 border-transparent group-hover:border-yellow-300 shadow-2xl transition-all duration-500"
+                  className="relative w-36 h-36 rounded-full border-4  border-yellow-300 shadow-2xl transition-all duration-500"
                   style={{
                     background: `linear-gradient(135deg, ${
                       user.badge === 'Diamond'

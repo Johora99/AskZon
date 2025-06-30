@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaSignInAlt, FaPenFancy, FaLightbulb } from 'react-icons/fa';
 import Button from '../ShareComponent/Button';
+import JumpingBallComponent from '../ShareComponent/JumpingBallComponent';
 
 export default function HowItWorks() {
   const steps = [
@@ -34,6 +35,10 @@ export default function HowItWorks() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+      <div className='flex items-center justify-center'>
+      <JumpingBallComponent title={'how it work'}></JumpingBallComponent>
+      </div>
+  
         <h2 className="text-4xl md:text-7xl font-bold text-center mb-4">
           How <span className='text-yellow-400'>AskZone</span> Works
         </h2>
