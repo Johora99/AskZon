@@ -122,7 +122,7 @@ export default function TopUsers() {
         <div className="flex items-center justify-center">
           <JumpingBallComponent title="Top Contributors" />
         </div>
-        <h2 className="text-4xl md:text-7xl font-bold text-center mb-4">
+        <h2 className="text-4xl md:text-7xl font-bold text-center mb-4 text-gray-800">
         Our <span className='text-yellow-700'>Top</span> Contributors
         </h2>
         <p className="text-lg md:text-xl text-yellow-700 max-w-3xl mx-auto leading-relaxed px-6">

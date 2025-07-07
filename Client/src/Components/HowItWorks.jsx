@@ -39,7 +39,7 @@ export default function HowItWorks() {
       <JumpingBallComponent title={'how it work'}></JumpingBallComponent>
       </div>
   
-        <h2 className="text-4xl md:text-7xl font-bold text-center mb-4">
+        <h2 className="text-4xl md:text-7xl font-bold text-center mb-4 text-gray-800">
           How <span className='text-yellow-400'>AskZone</span> Works
         </h2>
         <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12 tracking-widest">

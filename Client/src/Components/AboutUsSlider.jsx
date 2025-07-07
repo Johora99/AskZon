@@ -37,7 +37,7 @@ export default function AboutUsSlider() {
           exit={{ x: direction === 1 ? -300 : 300, opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-semibold mb-4">{slides[current].title}</h2>
+          <h2 className="text-3xl text-gray-800 font-semibold mb-4">{slides[current].title}</h2>
           <p className="text-base leading-relaxed mb-6 text-yellow-950 ">{slides[current].text}</p>
         </motion.div>
       </AnimatePresence>
@@ -45,14 +45,14 @@ export default function AboutUsSlider() {
       <div className="flex gap-4">
         <button
           onClick={prevSlide}
-          className="p-2 rounded hover:bg-yellow-400 transition"
+          className="p-2 rounded text-gray-800 hover:bg-yellow-400 transition"
           aria-label="Previous"
         >
           <ArrowLeft size={30} />
         </button>
         <button
           onClick={nextSlide}
-          className="p-2 rounded hover:bg-yellow-400 transition"
+          className="p-2 rounded text-gray-800 hover:bg-yellow-400 transition"
           aria-label="Next"
         >
           <ArrowRight size={30} />
