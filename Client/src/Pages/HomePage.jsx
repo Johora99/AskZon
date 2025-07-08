@@ -50,6 +50,9 @@ export default function HomePage() {
     />
   </svg>
     </div>
+    <div>
+      <OurServices />
+    </div>
     <div className="my-40 relative">
   <HowItWorks />
   <svg
@@ -67,9 +70,7 @@ export default function HomePage() {
     <div>
     <TopUsers />
     </div>
-    <div>
-      <OurServices />
-    </div>
+    
     <div>
       <Testimonials />
     </div>

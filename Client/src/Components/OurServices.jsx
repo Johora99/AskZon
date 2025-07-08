@@ -6,6 +6,8 @@ import icon3 from '../assets/icons8-user-groups-50.png'
 import icon4 from '../assets/icons8-development-skill-50.png'
 import icon5 from '../assets/icons8-reputation-64.png'
 import Servicecard from './Servicecard'
+import Button from '../ShareComponent/Button'
+import TimelineSection from './TimelineSection'
 
 export default function OurServices() {
 const services =   [
@@ -49,7 +51,7 @@ const services =   [
   return (
     <div className='w-full relative'>
     <div className='bg pt-30 pb-80'>
-      <div className='bg-gradient-to-b from-yellow-600  to-yellow-50 opacity-60 absolute top-0 w-full h-full'></div>
+      <div className='bg-gradient-to-b from-yellow-50  to-yellow-100 opacity-60 absolute top-0 w-full h-full'></div>
     <div className='container w-11/12 mx-auto relative z-50'>
          <div className='text-center lg:max-w-4xl mx-auto '>
         <div className='flex items-center justify-center'>
@@ -61,8 +63,28 @@ const services =   [
      {
     services.map(service => <Servicecard service={service}></Servicecard>)
      }
+        </div>
+         <div className='mt-100'>
+         <div className="min-h-screen grid grid-cols-2 gap-10 relative overflow-visible ">
+  <div className="sticky top-0 self-start py-30">
+    <JumpingBallComponent title={'Why Choose Us'} />
+    <div>
+      <h3 className="text-5xl font-bold text-gray-800 mt-5 mb-3">
+        Where Expertise Meets Innovation
+      </h3>
+      <p className="opacity-60 text-lg">
+        At Askzone, insight leads the way and passion powers every solution. With deep domain knowledge and a relentless drive for excellence, we deliver intelligent, results-driven outcomes that go beyond expectations.
+      </p>
+      <Button title={'Contact Us'} />
+    </div>
+  </div>
+
+  <div>
+    <TimelineSection />
+  </div>
 </div>
 
+         </div>
       </div>
       </div>
     </div>
